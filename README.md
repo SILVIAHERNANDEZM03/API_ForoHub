@@ -38,9 +38,6 @@ Body JSON:
   "contrasena": "12345678"
 }
 ```
-<img width="689" height="255" alt="image" src="https://github.com/user-attachments/assets/bbd067d9-11d0-4b13-8219-f99b1dcc86eb" />
-
-
 <img width="696" height="263" alt="image" src="https://github.com/user-attachments/assets/2af1da60-bb85-4d69-9fc5-71b1d46d4505" />
 
 
