@@ -12,6 +12,7 @@ import com.alura.ForoHub.repository.TopicoRepository;
 import com.alura.ForoHub.repository.UsuarioRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +30,7 @@ public class TopicoController {
     private CursoRepository cursoRepository;
 
     // Crear un nuevo tópico
+    @Transactional
     @PostMapping
     public void registrarTopico(@RequestBody @Valid DatosRegistroTopico datos) {
         Usuario autor = usuarioRepository.findById(datos.autorId())
@@ -62,6 +64,7 @@ public class TopicoController {
     }
 
     // Actualizar tópico
+    @Transactional
     @PutMapping
     public void actualizar(@RequestBody @Valid DatosActualizarTopico datos) {
         Topico topico = topicoRepository.findById(datos.id())
@@ -71,6 +74,7 @@ public class TopicoController {
     }
 
     // Eliminar tópico
+    @Transactional
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable Long id) {
         topicoRepository.deleteById(id);

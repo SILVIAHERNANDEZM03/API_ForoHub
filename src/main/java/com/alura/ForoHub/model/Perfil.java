@@ -1,14 +1,12 @@
 package com.alura.ForoHub.model;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 
-@Entity
+@Table(name = "perfil")
+@Entity(name = "Perfil")
 @Getter
 @Setter
 @NoArgsConstructor
